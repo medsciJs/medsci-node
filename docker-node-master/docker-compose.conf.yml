@@ -1,0 +1,17 @@
+version:  '3'
+services:
+  node-client:
+    build: ./node-client
+    restart: always
+    environment:
+      http_proxy: http://127.0.0.1:30101
+    network_mode: "service:mesher-consumer"
+    depends_on:
+      - mesher-consumer  
+  mesher-consumer:
+    image: gochassis/mesher
+    restart: always
+    volumes:
+      - ./mesher-linux/conf/:/opt/mesher/conf
+    ports:
+      - 88888:80

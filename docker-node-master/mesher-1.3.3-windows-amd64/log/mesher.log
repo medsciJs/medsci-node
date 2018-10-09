@@ -1,0 +1,88 @@
+2018-10-09 10:18:01.317 +08:00 WARN config-manager/configurationmanager.go:139 empty configurtion from CommandlineSource
+2018-10-09 10:18:01.317 +08:00 WARN config-manager/configurationmanager.go:139 empty configurtion from MemorySource
+2018-10-09 10:18:01.318 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\circuit_breaker.yaml] not exist
+2018-10-09 10:18:01.319 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\load_balancing.yaml] not exist
+2018-10-09 10:18:01.319 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\rate_limiting.yaml] not exist
+2018-10-09 10:18:01.320 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\tls.yaml] not exist
+2018-10-09 10:18:01.320 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\monitoring.yaml] not exist
+2018-10-09 10:18:01.321 +08:00 INFO archaius/archaius.go:49 [E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\tracing.yaml] not exist
+2018-10-09 10:18:01.321 +08:00 INFO archaius/archaius.go:75 Configuration files: E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\chassis.yaml, E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\microservice.yaml, E:\docker\docker-node-master\mesher-1.3.3-windows-amd64\conf\auth.yaml
+2018-10-09 10:18:01.322 +08:00 INFO config/config.go:312 archaius init success
+2018-10-09 10:18:01.323 +08:00 INFO go-chassis/chassis.go:102 Chain init success
+2018-10-09 10:18:01.323 +08:00 INFO go-sc-client/client.go:142 Use Service center v4
+2018-10-09 10:18:01.324 +08:00 WARN registry/bootstrap.go:30 No schemas file for microservice [hellonode2].
+2018-10-09 10:18:01.324 +08:00 INFO registry/bootstrap.go:52 Framework registered is [ Mesher:latest ]
+2018-10-09 10:18:01.325 +08:00 INFO registry/bootstrap.go:53 Micro service registered by [ SIDECAR ]
+2018-10-09 10:18:01.343 +08:00 WARN servicecenter/servicecenter.go:34 service [hellonode2:0.0.1:medsci-pass] not exists in registry, register it%!(EXTRA <nil>)
+2018-10-09 10:18:01.382 +08:00 INFO registry/bootstrap.go:61 Register [hellonode2] success
+2018-10-09 10:18:01.446 +08:00 INFO registry/bootstrap.go:90 Don't need add dependency
+2018-10-09 10:18:01.446 +08:00 INFO registry/registrator.go:83 Enable [servicecenter] registrator.
+2018-10-09 10:18:01.447 +08:00 INFO go-sc-client/client.go:142 Use Service center v4
+2018-10-09 10:18:01.491 +08:00 INFO registry/discovery.go:67 Enable servicecenter service discovery.
+2018-10-09 10:18:01.491 +08:00 INFO go-sc-client/client.go:142 Use Service center v4
+2018-10-09 10:18:01.491 +08:00 INFO registry/discovery.go:85 Enable servicecenter contract discovery.
+2018-10-09 10:18:01.492 +08:00 INFO registry/registrator.go:156 Enabled Registry
+2018-10-09 10:18:01.492 +08:00 INFO loadbalancer/load_balancer.go:112 Enable LoadBalancing
+2018-10-09 10:18:01.493 +08:00 INFO loadbalancer/load_balancer.go:126 Strategy is 
+2018-10-09 10:18:01.493 +08:00 INFO bootstrap/bootstrap.go:37 Bootstrap metric
+2018-10-09 10:18:01.493 +08:00 INFO metrics/metric.go:63 report metrics to CSE Monitoring
+2018-10-09 10:18:01.494 +08:00 WARN servicecenter/servicecenter.go:317 aa48f9b2cb6911e8bd4964006a422233 Get instances from remote, key: CseMonitoring
+2018-10-09 10:18:01.505 +08:00 WARN endpoint-discovery/endpoint.go:21 Get service instance failed, for key: default:CseMonitoring:latest
+2018-10-09 10:18:01.505 +08:00 WARN cse-collector/utils.go:73 empty monitor server endpoint, please provide the monitor server endpoint, err: FindMicroServiceInstances failed, ProviderID: CseMonitoring, err: FindMicroServiceInstances failed, appID/MicroServiceName/version: default/CseMonitoring/0+, response StatusCode: 400, response body: {"errorCode":"400012","errorMessage":"Micro-service does not exist","detail":"provider not exist, consumer aa48f9b2cb6911e8bd4964006a422233 find provider default/CseMonitoring/0+"}
+
+2018-10-09 10:18:01.506 +08:00 WARN cse-collector/register.go:23 Get Monitoring URL failed, CSE monitoring function disabled, err: FindMicroServiceInstances failed, ProviderID: CseMonitoring, err: FindMicroServiceInstances failed, appID/MicroServiceName/version: default/CseMonitoring/0+, response StatusCode: 400, response body: {"errorCode":"400012","errorMessage":"Micro-service does not exist","detail":"provider not exist, consumer aa48f9b2cb6911e8bd4964006a422233 find provider default/CseMonitoring/0+"}
+
+2018-10-09 10:18:01.506 +08:00 INFO metrics/metric.go:63 report metrics to Prometheus
+2018-10-09 10:18:01.507 +08:00 INFO prom/prometheus.go:253 Go Runtime Metrics is enabled
+2018-10-09 10:18:01.507 +08:00 WARN servicecenter/servicecenter.go:317 aa48f9b2cb6911e8bd4964006a422233 Get instances from remote, key: CseConfigCenter
+2018-10-09 10:18:01.521 +08:00 WARN endpoint-discovery/endpoint.go:21 Get service instance failed, for key: default:CseConfigCenter:latest
+2018-10-09 10:18:01.521 +08:00 WARN config-center/config_center.go:87 empty config center endpoint in service center FindMicroServiceInstances failed, ProviderID: CseConfigCenter, err: FindMicroServiceInstances failed, appID/MicroServiceName/version: default/CseConfigCenter/0+, response StatusCode: 400, response body: {"errorCode":"400012","errorMessage":"Micro-service does not exist","detail":"provider not exist, consumer aa48f9b2cb6911e8bd4964006a422233 find provider default/CseConfigCenter/0+"}
+
+2018-10-09 10:18:01.522 +08:00 WARN config-manager/configurationmanager.go:139 empty configurtion from RouteFileSource
+2018-10-09 10:18:01.522 +08:00 INFO cse/router_manager.go:132 Add [RouteFileSource] source success
+2018-10-09 10:18:01.522 +08:00 WARN config-manager/configurationmanager.go:139 empty configurtion from RouteDarkLaunchGovernSource
+2018-10-09 10:18:01.523 +08:00 INFO cse/router_manager.go:132 Add [RouteDarkLaunchGovernSource] source success
+2018-10-09 10:18:01.523 +08:00 INFO router/router_config.go:39 Router init success
+2018-10-09 10:18:01.523 +08:00 INFO tracing/tracer_manager.go:35 Tracing enabled. Start to init tracer map.
+2018-10-09 10:18:01.524 +08:00 INFO go-chassis/chassis.go:277 Init chassis success, Version is 0.5
+2018-10-09 10:18:01.524 +08:00 INFO bootstrap/bootstrap.go:52 Running as sidecar
+2018-10-09 10:18:01.525 +08:00 INFO adminapi/router.go:47 admin server is not using ssl
+2018-10-09 10:18:01.525 +08:00 INFO archaius/archaius.go:88 config value after change mesher.yaml | # Router rules and fault injection rules are moved to router.yaml
+#plugin:
+#  destinationResolver: host #用户可自定义如何将host转为换destination name，默认为host直接就是service name，
+#admin: #admin API
+#  serverUri : 127.0.0.1:30102 # 在哪个地址监听
+#  goRuntimeMetrics : true # 是否开启go 运行时监控
+2018-10-09 10:18:01.525 +08:00 INFO adminapi/router.go:51 admin server listening on [::]:30102
+2018-10-09 10:18:02.525 +08:00 INFO adminapi/router.go:64 admin server start success
+2018-10-09 10:18:02.525 +08:00 WARN bootstrap/bootstrap.go:41 local service ports is missing, service can not be called by mesher
+2018-10-09 10:18:02.525 +08:00 INFO mesher/mesher.go:38 Version is 
+2018-10-09 10:18:02.525 +08:00 INFO server/server_manager.go:58 starting server http...
+2018-10-09 10:18:02.526 +08:00 WARN http/http_server.go:102 Mesher listen on 127.0.0.1, it can only proxy for consumer. for provider, mesher must listen on external ip.
+2018-10-09 10:18:02.526 +08:00 INFO server/server_manager.go:64 http server start success
+2018-10-09 10:18:02.526 +08:00 INFO server/server_manager.go:66 All server Start Completed
+2018-10-09 10:18:02.526 +08:00 INFO registry/bootstrap.go:112 Start to register instance.
+2018-10-09 10:18:02.533 +08:00 INFO registry/bootstrap.go:132 service support protocols map[http:{127.0.0.1:30101  %!s(int=0)  }]
+2018-10-09 10:18:02.612 +08:00 WARN servicecenter/servicecenter.go:58 RegisterMicroServiceInstance get SelfInstancesCache failed, Mid/Sid: aa48f9b2cb6911e8bd4964006a422233/aafc15cccb6911e8bd4964006a422233
+2018-10-09 10:18:02.612 +08:00 WARN servicecenter/servicecenter.go:62 RegisterMicroServiceInstance type asserts failed,  Mid/Sid: aa48f9b2cb6911e8bd4964006a422233/aafc15cccb6911e8bd4964006a422233
+2018-10-09 10:18:02.613 +08:00 INFO servicecenter/servicecenter.go:74 RegisterMicroServiceInstance success, MicroServiceID: aa48f9b2cb6911e8bd4964006a422233
+2018-10-09 10:18:02.613 +08:00 INFO registry/heartbeat.go:49 Add HB task, task:aa48f9b2cb6911e8bd4964006a422233/aafc15cccb6911e8bd4964006a422233
+2018-10-09 10:18:02.613 +08:00 INFO servicecenter/servicecenter.go:80 RegisterMicroServiceInstance success, microServiceID/instanceID: aa48f9b2cb6911e8bd4964006a422233/aafc15cccb6911e8bd4964006a422233.
+2018-10-09 10:18:02.613 +08:00 INFO registry/bootstrap.go:177 Register instance success, serviceID/instanceID: aa48f9b2cb6911e8bd4964006a422233/aafc15cccb6911e8bd4964006a422233.
+2018-10-09 10:18:27.553 +08:00 WARN servicecenter/servicecenter.go:317 aa48f9b2cb6911e8bd4964006a422233 Get instances from remote, key: HelloServiceComb
+2018-10-09 10:18:27.800 +08:00 INFO client/client_manager.go:84 Create client map for rest
+2018-10-09 10:18:27.801 +08:00 INFO client/client_manager.go:94 Create client for HelloServiceComb
+2018-10-09 10:18:48.804 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2018-10-09 10:18:48.805 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2018-10-09 10:32:37.735 +08:00 WARN servicecenter/servicecenter.go:317 aa48f9b2cb6911e8bd4964006a422233 Get instances from remote, key: authserver
+2018-10-09 10:32:37.880 +08:00 INFO client/client_manager.go:94 Create client for authserver
+2018-10-09 10:33:33.277 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Post http://10.0.1.105:9292/auth/login: context canceled
+2018-10-09 10:33:33.282 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Post http://10.0.1.105:9292/auth/login: context canceled
+2018-10-09 10:34:03.793 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Post http://10.0.1.253:9191/auth/login: net/http: HTTP/1.x transport connection broken: read tcp4 127.0.0.1:30101->127.0.0.1:58257: wsarecv: An existing connection was forcibly closed by the remote host.
+2018-10-09 10:34:03.793 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Post http://10.0.1.253:9191/auth/login: net/http: HTTP/1.x transport connection broken: read tcp4 127.0.0.1:30101->127.0.0.1:58257: wsarecv: An existing connection was forcibly closed by the remote host.
+2018-10-09 10:39:33.317 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Post http://10.0.1.105:9292/auth/login: EOF
+2018-10-09 10:39:33.319 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Post http://10.0.1.105:9292/auth/login: EOF
+2018-10-09 10:42:32.098 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2018-10-09 10:42:32.098 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2018-10-09 10:44:26.293 +08:00 ERROR handler/transport_handler.go:47 Call got Error error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+2018-10-09 10:44:26.293 +08:00 ERROR http/reverse_proxy.go:103 Handle request failed error: Get http://172.23.0.3:8090/hello: dial tcp 172.23.0.3:8090: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.

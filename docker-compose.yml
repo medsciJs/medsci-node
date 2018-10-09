@@ -1,0 +1,26 @@
+version:  '3'
+services:
+  java-provider:
+    build: ./java-provider
+    restart: always
+    network_mode: "host" 
+    ports:
+      - 8383:8090      
+  node-client:
+    build: ./node-client
+    restart: always
+    environment:
+      http_proxy: http://127.0.0.1:30101
+    network_mode: "service:mesher-consumer"
+    depends_on:
+      - mesher-consumer  
+  mesher-consumer:
+    image: gochassis/mesher
+    restart: always
+    environment:
+      CSE_REGISTRY_ADDR: http://10.0.1.251:30103
+      SERVICE_NAME: "mesher-consumer"
+      APP_ID: "medsci-pass"
+      network_mode: "service:node-client" 
+    ports:
+      - 8282:80
